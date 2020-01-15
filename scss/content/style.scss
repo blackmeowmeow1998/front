@@ -1,0 +1,36 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.0 Common & Reset style
+    1.1 Plugins
+        1.1.1 Bootstrap
+        1.1.2 Font Awesome Icon
+        1.1.3 Owl Carousel
+    1.2 Config Skin
+
+2.0 Base
+    2.1 Header
+    2.2 Content
+    2.3 Blog
+    2.4 Footer
+
+3.0 Content
+    3.1 Widget
+    3.2 Blog
+    3.3 Portfolio
+    3.4 Content
+-------------------------------------------------------------------*/
+.container {
+    max-width: 1140px;
+}
+.line {
+    width: 50px!important;
+    border-bottom: solid #8262B5 1px;
+}
+*{
+    font-family: 'Montserrat';
+}
+@import '../base/header.scss';
+@import '../base/content.scss';
+@import '../base/blog.scss';
+@import '../base/footer.scss';

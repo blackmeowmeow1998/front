@@ -1,0 +1,17 @@
+/* Style for Footer
+*/
+.footer {
+	background-color: #222222;
+	color: white;
+	.contaienr {
+		max-width: 1170px!important;
+		.footer-content {
+			.footer-content__col {
+				.col__title {
+					padding-top: 13px;
+					height: 80px;
+				}
+			}
+		}
+	}
+}
