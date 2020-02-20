@@ -1,47 +1,94 @@
 /*2.1 Hearder*/
 .header {
 	margin: auto;
-	max-width: 1920px;
-	height: 79px;
 	text-align: center;
+	position: relative;
 	.header__logo {
-		height: 79px;
-		padding: 20px 0px 19px 30px;
+		position: absolute;
+		left: 0px;
+		@include responsive_mobile {
+			float: none;
+			display: block;
+		}
+		padding: 20px 0px 20px 30px;
 		img {
+			@include responsive_mobile {
+				
+			}
 			height: 100%;
-			// margin: 20px 0px 19px 30px;
-			max-height: 40px;
-			width: 200px;
 			float: left;
 		}
 	}
 	.header__menu {
-		height: 79px;
+		@include responsive_mobile {
+			position: relative;
+		}
 		padding: 35px 20px 35px 20px;
-		ul {
-			line-height: 0.5;
-			li {
-				margin: 0px 14px;
-				display: inline-block;
-				a {
-					font-weight: bold;
-					font-size: 14px;
-					font-family: 'Montserrat';
-					color: #000000;
+		.menu {
+			ul {
+				@include responsive_mobile {
+					position: absolute;
+					top: 80px;
+					left: 0px;
+					z-index: 1000;
+					padding-left: 0px;
+					width: 100vw;
+					margin: auto;
 				}
-				a:hover {
-					color: #8262B5;
-					text-decoration: none;
+				line-height: 0.5;
+				li {
+					@include responsive_mobile {
+						display: none;
+					}
+					padding-left: 20px;
+					padding-right: 20px;
+					display: inline-block;
+					a {
+						font-weight: bold;
+						font-size: 14px;
+						font-family: 'Montserrat';
+						color: #000000;
+					}
+					a:hover {
+						color: #8262B5;
+						text-decoration: none;
+					}
+				}
+				
+			}
+		}
+		@include responsive_mobile {
+			ul {
+				li {
+					display: none;
+					list-style-type: none;
+					background: white;
+					padding: 10px;
+					width: 100%;
 				}
 			}
 		}
 	}
 	.header__tag {
-		padding: 20px 30px 19px 0px;
-		img {
-			height: 100%;
-			max-height: 26px;
+		padding: 30px 30px 19px 0px;
+		position: absolute;
+		right: 0px;
+		i {
+			color: #3B3B3B;
+			font-size: 20px;
 			float: right;
+			margin-left: 10px;
+		}
+		#bars {
+			display: none;
+			@include responsive_mobile {
+				display: inline;
+			}
+			a {
+				color: black;
+				font-size: 18px;
+			}
 		}
 	}
+
 }

@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title> Fashion</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
@@ -10,17 +11,17 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
-   	<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+   	<link rel="stylesheet" type="text/css" href="slick_slider/slick/slick.css">
+   	<link rel="stylesheet" type="text/css" href="slick_slider/slick/slick-theme.css">
 </head>
 <body>	
 	<div class="header container-fluid">
 		<div class="row">
-			<div class="header__logo col-md-3">
+			<div class="header__logo" id="logo">
 				<a href=""><img src="img/header/logo.jpg" alt="logo"></a>
 			</div>
-			<div class="header__menu col-md-6">
-				<div class="container">
+			<div class="header__menu container">
+				<div class="container menu">								
 					<ul>
 						<li id="home">
 							<a href="">HOME</a>
@@ -49,9 +50,10 @@
 					</ul>
 				</div>
 			</div>
-			<div class="header__tag col-md-3">
-				<a href=""><img src="img/header/xe.jpg" alt="xe"></a>
-				<a href=""><img src="img/header/heart.jpg" alt="heart"></a>
+			<div class="header__tag">
+				<a href=""><i class="fas fa-bars" id="bars"></i></a>
+				<a href=""><i class="far fa-heart"></i></a>
+				<a href=""><i class="fas fa-shopping-cart"></i></a>		
 			</div>
 		</div>
 	</div>
@@ -60,53 +62,62 @@
 		<div class="content__ads row">
 			<div class="col-md-8">
 				<div class="ads-left">
-					<div class="ads__title">
-						<p>
-							<span>
-								Two High-end Materials
-							</span>
-						</p>
+					<img src="img/content/head_content/left.jpg">
+					<div class="ads-box">
+						<div class="ads__title">
+							<p>
+								<span>
+									Two High-end Materials
+								</span>
+							</p>
+							</div>
+							<p>
+								<a href="">
+									<button>Shop Now</button>
+								</a>
+							</p>
 					</div>
-					<p>
-						<a href="">
-							<button>Shop Now</button>
-						</a>
-					</p>
 				</div>
 			</div>
 			<div class="ads-right col-md-4">
-				<div class="ads-right__top row">
-					<div class="ads-right__text">
+				<div class="ads-right__top">
+					<img src="img/content/head_content/top-right.jpg">
+					<div class="left-box">
+						<div class="ads-right__text">
 						<span>
 							SMALL THING
-						</span>
-					</div>
-					<div class="ads-right__title">
-						<span>
-							MAKE DIFFERENT
-						</span>
+							</span>
+						</div>
+						<div class="ads-right__title">
+							<span>
+								MAKE DIFFERENT
+							</span>
+						</div>
 					</div>
 				</div>
-				<div class="ads-right__bottom row">
-					<div class="ads-right__text">
+				<div class="ads-right__bottom">
+					<img src="img/content/head_content/bottom-right.jpg">
+					<div class="box-right">
+						<div class="ads-right__text">
 						<span>
 							FOLIO
 						</span>
+						</div>
+						<div class="ads-right__title">
+							<span>
+								BACKPACK
+							</span>
+						</div>
+						<p>
+							<a href="">
+								<button>Shop Now</button>
+							</a>
+						</p>
 					</div>
-					<div class="ads-right__title">
-						<span>
-							BACKPACK
-						</span>
-					</div>
-					<p>
-						<a href="">
-							<button>Shop Now</button>
-						</a>
-					</p>
 				</div>
 			</div>
 		</div>
-		<div class="content__product">
+		<div class="content__product container">
 			<div class="row product__title">
 				<div class="title__head col-md-12">
 					<p>
@@ -118,20 +129,18 @@
 						FEATURED ITEMS
 					</h3>
 				</div>
-				<div class="line">
-				<p>  </p>			
-				</div>
 			</div>
-
 			<div class="product__list">
 				<div class="row">
-					<div class="product product1">
-						<a href="">
-							<button>
-								ADD TO CART
-							</button>
-						</a>
-						<img src="img/content/product/product_row1_1.jpg" alt="product">
+					<div class="product col-md-3">
+						<div class="headpro">
+							<a href="">
+								<button>
+									ADD TO CART
+								</button>
+							</a>
+							<img src="img/content/product/product_row1_1.jpg" alt="product">
+						</div>
 						<div class="product__text-content">
 							<h5>
 								Suspendisse id volutpat
@@ -150,13 +159,15 @@
 							</p>
 						</div>
 					</div>
-					<div class="product product2">
-						<a href="">
-							<button>
-								ADD TO CART
-							</button>
-						</a>
-						<img src="img/content/product/product_row1_2.jpg" alt="product">
+					<div class="product col-md-3">
+						<div class="headpro">
+							<a href="">
+								<button>
+									ADD TO CART
+								</button>
+							</a>
+							<img src="img/content/product/product_row1_2.jpg" alt="product">
+						</div>
 						<div class="product__text-content">
 							<h5>
 								Loren ipsum donor
@@ -175,13 +186,15 @@
 							</p>
 						</div>
 					</div>
-					<div class="product product3">
-						<a href="">
-							<button>
-								ADD TO CART
-							</button>
-						</a>
-						<img src="img/content/product/product_row1_3.jpg" alt="product">
+					<div class="product col-md-3">
+						<div class="headpro">
+							<a href="">
+								<button>
+									ADD TO CART
+								</button>
+							</a>
+							<img src="img/content/product/product_row1_3.jpg" alt="product">
+						</div>
 						<div class="product__text-content">
 							<h5>
 								Proin sed nulla mi
@@ -200,13 +213,15 @@
 							</p>
 						</div>
 					</div>
-					<div class="product product4">
-						<a href="">
-							<button>
-								ADD TO CART
-							</button>
-						</a>
-						<img src="img/content/product/product_row1_4.jpg" alt="product">
+					<div class="product col-md-3">
+						<div class="headpro">
+							<a href="">
+								<button>
+									ADD TO CART
+								</button>
+							</a>
+							<img src="img/content/product/product_row1_4.jpg" alt="product">
+						</div>
 						<div class="product__text-content">
 							<h5>
 								Aenean placerat
@@ -228,13 +243,15 @@
 				</div>
 
 				<div class="row">
-					<div class="product product1">
-						<a href="">
-							<button>
-								ADD TO CART
-							</button>
-						</a>
-						<img src="img/content/product/product_row2_1.jpg" alt="product">
+					<div class="product col-md-3">
+						<div class="headpro">
+							<a href="">
+								<button>
+									ADD TO CART
+								</button>
+							</a>
+							<img src="img/content/product/product_row2_1.jpg" alt="product">
+						</div>
 						<div class="product__text-content">
 							<h5>
 								Suspendisse id volutpat
@@ -253,13 +270,15 @@
 							</p>
 						</div>
 					</div>
-					<div class="product product2">
-						<a href="">
-							<button>
-								ADD TO CART
-							</button>
-						</a>
-						<img src="img/content/product/product_row2_2.jpg" alt="product">
+					<div class="product col-md-3">
+						<div class="headpro">
+								<a href="">
+								<button>
+									ADD TO CART
+								</button>
+							</a>
+							<img src="img/content/product/product_row2_2.jpg" alt="product">
+						</div>
 						<div class="product__text-content">
 							<h5>
 								Suspendisse id volutpat
@@ -278,13 +297,15 @@
 							</p>
 						</div>
 					</div>
-					<div class="product product3">
-						<a href="">
-							<button>
-								ADD TO CART
-							</button>
-						</a>
-						<img src="img/content/product/product_row2_3.jpg" alt="product">
+					<div class="product col-md-3">
+						<div class="headpro">
+								<a href="">
+								<button>
+									ADD TO CART
+								</button>
+							</a>
+							<img src="img/content/product/product_row2_3.jpg" alt="product">
+						</div>
 						<div class="product__text-content">
 							<h5>
 								Suspendisse id volutpat
@@ -303,13 +324,15 @@
 							</p>
 						</div>
 					</div>
-					<div class="product product4">
-						<a href="">
-							<button>
-								ADD TO CART
-							</button>
-						</a>
-						<img src="img/content/product/product_row2_4.jpg" alt="product">
+					<div class="product col-md-3">
+						<div class="headpro">
+							<a href="">
+								<button>
+									ADD TO CART
+								</button>
+							</a>
+							<img src="img/content/product/product_row2_4.jpg" alt="product">
+						</div>
 						<div class="product__text-content">
 							<h5>
 								Suspendisse id volutpat
@@ -341,308 +364,435 @@
 				<span>
 					NEWS & EVENTS
 				</span>
-				<div class="line"></div>
 			</div>
-			<div class="blog__slide">
-				<div class="owl-carousel owl-theme">
-	                <div class="item row">
-	                	<div class="slide__content sl-left">
-	                		<div class="slide__content__image">
-	                			<img src="img/blog/post1.jpg" alt="img">
-	                			<div class="box-out">
-	                				<div class="box-in">
-	                					<p>Jan</p>
-	                					<h5>23</h5>
-	                				</div>
-	                			</div>
-	                		</div>
-	                		<div class="slide__content__text">
-	                			<a href="">
-	                				<h4>
-		                				In commodo dolor vitae
-		                			</h4>
-	                			</a>
-	                			<p>
-	                				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
-	                			</p>
-	                		</div>
-	                		<div class="slide__content__info">
-	                			<p>
-	                				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
-	                			</p>
-	                		</div>
-	                	</div>
+			<div class="sliders row" id="sliders">   
+            	<div class="slide__content col-md-4">
+            		<div class="slide__content__image">
+            			<img src="img/blog/post1.jpg" alt="img">
+            			<div class="box-out">
+            				<div class="box-in">
+            					<p>Jan</p>
+            					<h5>23</h5>
+            				</div>
+            			</div>
+            		</div>
+            		<div class="slide__content__text">
+            			<a href="">
+            				<h4>
+                				In commodo dolor vitae
+                			</h4>
+            			</a>
+            			<p>
+            				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
+            			</p>
+            		</div>
+            		<div class="slide__content__info">
+            			<p>
+            				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
+            			</p>
+            		</div>
+            	</div>
 
-	                	<div class="slide__content sl-center">
-	                		<div class="slide__content__image">
-	                			<img src="img/blog/post2.jpg" alt="img">
-	                			<div class="box-out">
-	                				<div class="box-in">
-	                					<p>Jan</p>
-	                					<h5>23</h5>
-	                				</div>
-	                			</div>
-	                		</div>
-	                		<div class="slide__content__text">
-	                			<a href="">
-	                				<h4>
-		                				Vivamus non dignissim elit
-		                			</h4>
-	                			</a>
-	                			<p>
-	                				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
-	                			</p>
-	                		</div>
-	                		<div class="slide__content__info">
-	                			<p>
-	                				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
-	                			</p>
-	                		</div>
-	                	</div>	
+            	<div class="slide__content col-md-4">
+            		<div class="slide__content__image">
+            			<img src="img/blog/post2.jpg" alt="img">
+            			<div class="box-out">
+            				<div class="box-in">
+            					<p>Jan</p>
+            					<h5>23</h5>
+            				</div>
+            			</div>
+            		</div>
+            		<div class="slide__content__text">
+            			<a href="">
+            				<h4>
+                				Vivamus non dignissim elit
+                			</h4>
+            			</a>
+            			<p>
+            				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
+            			</p>
+            		</div>
+            		<div class="slide__content__info">
+            			<p>
+            				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
+            			</p>
+            		</div>
+            	</div>	
 
-	                	<div class="slide__content sl-right">
-	                		<div class="slide__content__image">
-	                			<img src="img/blog/post3.jpg" alt="img">
-	                			<div class="box-out">
-	                				<div class="box-in">
-	                					<p>Jan</p>
-	                					<h5>23</h5>
-	                				</div>
-	                			</div>
-	                		</div>
-	                		<div class="slide__content__text">
-	                			<a href="">
-	                				<h4>
-		                				Ut lacinia erat ut diam volutpat
-		                			</h4>
-	                			</a>
-	                			<p>
-	                				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
-	                			</p>
-	                		</div>
-	                		<div class="slide__content__info">
-	                			<p>
-	                				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
-	                			</p>
-	                		</div>
-	                	</div>		
-	                </div>
-	            	
-	            	<div class="item row">
-	                	<div class="slide__content sl-left">
-	                		<div class="slide__content__image">
-	                			<img src="img/blog/post1.jpg" alt="img">
-	                			<div class="box-out">
-	                				<div class="box-in">
-	                					<p>Jan</p>
-	                					<h5>23</h5>
-	                				</div>
-	                			</div>
-	                		</div>
-	                		<div class="slide__content__text">
-	                			<a href="">
-	                				<h4>
-		                				In commodo dolor vitae
-		                			</h4>
-	                			</a>
-	                			<p>
-	                				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
-	                			</p>
-	                		</div>
-	                		<div class="slide__content__info">
-	                			<p>
-	                				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
-	                			</p>
-	                		</div>
-	                	</div>
+            	<div class="slide__content col-md-4">
+            		<div class="slide__content__image">
+            			<img src="img/blog/post3.jpg" alt="img">
+            			<div class="box-out">
+            				<div class="box-in">
+            					<p>Jan</p>
+            					<h5>23</h5>
+            				</div>
+            			</div>
+            		</div>
+            		<div class="slide__content__text">
+            			<a href="">
+            				<h4>
+                				Ut lacinia erat ut diam volutpat
+                			</h4>
+            			</a>
+            			<p>
+            				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
+            			</p>
+            		</div>
+            		<div class="slide__content__info">
+            			<p>
+            				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
+            			</p>
+            		</div>
+            	</div>		
+        
+            	<div class="slide__content col-md-4">
+            		<div class="slide__content__image">
+            			<img src="img/blog/post1.jpg" alt="img">
+            			<div class="box-out">
+            				<div class="box-in">
+            					<p>Jan</p>
+            					<h5>23</h5>
+            				</div>
+            			</div>
+            		</div>
+            		<div class="slide__content__text">
+            			<a href="">
+            				<h4>
+                				In commodo dolor vitae
+                			</h4>
+            			</a>
+            			<p>
+            				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
+            			</p>
+            		</div>
+            		<div class="slide__content__info">
+            			<p>
+            				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
+            			</p>
+            		</div>
+            	</div>
 
-	                	<div class="slide__content sl-center">
-	                		<div class="slide__content__image">
-	                			<img src="img/blog/post2.jpg" alt="img">
-	                			<div class="box-out">
-	                				<div class="box-in">
-	                					<p>Jan</p>
-	                					<h5>23</h5>
-	                				</div>
-	                			</div>
-	                		</div>
-	                		<div class="slide__content__text">
-	                			<a href="">
-	                				<h4>
-		                				Vivamus non dignissim elit
-		                			</h4>
-	                			</a>
-	                			<p>
-	                				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
-	                			</p>
-	                		</div>
-	                		<div class="slide__content__info">
-	                			<p>
-	                				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
-	                			</p>
-	                		</div>
-	                	</div>	
+            	<div class="slide__content col-md-4">
+            		<div class="slide__content__image">
+            			<img src="img/blog/post2.jpg" alt="img">
+            			<div class="box-out">
+            				<div class="box-in">
+            					<p>Jan</p>
+            					<h5>23</h5>
+            				</div>
+            			</div>
+            		</div>
+            		<div class="slide__content__text">
+            			<a href="">
+            				<h4>
+                				Vivamus non dignissim elit
+                			</h4>
+            			</a>
+            			<p>
+            				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
+            			</p>
+            		</div>
+            		<div class="slide__content__info">
+            			<p>
+            				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
+            			</p>
+            		</div>
+            	</div>	
 
-	                	<div class="slide__content sl-right">
-	                		<div class="slide__content__image">
-	                			<img src="img/blog/post3.jpg" alt="img">
-	                			<div class="box-out">
-	                				<div class="box-in">
-	                					<p>Jan</p>
-	                					<h5>23</h5>
-	                				</div>
-	                			</div>
-	                		</div>
-	                		<div class="slide__content__text">
-	                			<a href="">
-	                				<h4>
-		                				Ut lacinia erat ut diam volutpat
-		                			</h4>
-	                			</a>
-	                			<p>
-	                				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
-	                			</p>
-	                		</div>
-	                		<div class="slide__content__info">
-	                			<p>
-	                				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
-	                			</p>
-	                		</div>
-	                	</div>		
-	                </div>
+            	<div class="slide__content col-md-4">
+            		<div class="slide__content__image">
+            			<img src="img/blog/post3.jpg" alt="img">
+            			<div class="box-out">
+            				<div class="box-in">
+            					<p>Jan</p>
+            					<h5>23</h5>
+            				</div>
+            			</div>
+            		</div>
+            		<div class="slide__content__text">
+            			<a href="">
+            				<h4>
+                				Ut lacinia erat ut diam volutpat
+                			</h4>
+            			</a>
+            			<p>
+            				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
+            			</p>
+            		</div>
+            		<div class="slide__content__info">
+            			<p>
+            				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
+            			</p>
+            		</div>
+            	</div>		
+           
+            	<div class="slide__content col-md-4">
+            		<div class="slide__content__image">
+            			<img src="img/blog/post1.jpg" alt="img">
+            			<div class="box-out">
+            				<div class="box-in">
+            					<p>Jan</p>
+            					<h5>23</h5>
+            				</div>
+            			</div>
+            		</div>
+            		<div class="slide__content__text">
+            			<a href="">
+            				<h4>
+                				In commodo dolor vitae
+                			</h4>
+            			</a>
+            			<p>
+            				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
+            			</p>
+            		</div>
+            		<div class="slide__content__info">
+            			<p>
+            				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
+            			</p>
+            		</div>
+            	</div>
 
-	                <div class="item row">
-	                	<div class="slide__content sl-left">
-	                		<div class="slide__content__image">
-	                			<img src="img/blog/post1.jpg" alt="img">
-	                			<div class="box-out">
-	                				<div class="box-in">
-	                					<p>Jan</p>
-	                					<h5>23</h5>
-	                				</div>
-	                			</div>
-	                		</div>
-	                		<div class="slide__content__text">
-	                			<a href="">
-	                				<h4>
-		                				In commodo dolor vitae
-		                			</h4>
-	                			</a>
-	                			<p>
-	                				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
-	                			</p>
-	                		</div>
-	                		<div class="slide__content__info">
-	                			<p>
-	                				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
-	                			</p>
-	                		</div>
-	                	</div>
+            	<div class="slide__content col-md-4">
+            		<div class="slide__content__image">
+            			<img src="img/blog/post2.jpg" alt="img">
+            			<div class="box-out">
+            				<div class="box-in">
+            					<p>Jan</p>
+            					<h5>23</h5>
+            				</div>
+            			</div>
+            		</div>
+            		<div class="slide__content__text">
+            			<a href="">
+            				<h4>
+                				Vivamus non dignissim elit
+                			</h4>
+            			</a>
+            			<p>
+            				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
+            			</p>
+            		</div>
+            		<div class="slide__content__info">
+            			<p>
+            				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
+            			</p>
+            		</div>
+            	</div>	
 
-	                	<div class="slide__content sl-center">
-	                		<div class="slide__content__image">
-	                			<img src="img/blog/post2.jpg" alt="img">
-	                			<div class="box-out">
-	                				<div class="box-in">
-	                					<p>Jan</p>
-	                					<h5>23</h5>
-	                				</div>
-	                			</div>
-	                		</div>
-	                		<div class="slide__content__text">
-	                			<a href="">
-	                				<h4>
-		                				Vivamus non dignissim elit
-		                			</h4>
-	                			</a>
-	                			<p>
-	                				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
-	                			</p>
-	                		</div>
-	                		<div class="slide__content__info">
-	                			<p>
-	                				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
-	                			</p>
-	                		</div>
-	                	</div>	
-
-	                	<div class="slide__content sl-right">
-	                		<div class="slide__content__image">
-	                			<img src="img/blog/post3.jpg" alt="img">
-	                			<div class="box-out">
-	                				<div class="box-in">
-	                					<p>Jan</p>
-	                					<h5>23</h5>
-	                				</div>
-	                			</div>
-	                		</div>
-	                		<div class="slide__content__text">
-	                			<a href="">
-	                				<h4>
-		                				Ut lacinia erat ut diam volutpat
-		                			</h4>
-	                			</a>
-	                			<p>
-	                				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
-	                			</p>
-	                		</div>
-	                		<div class="slide__content__info">
-	                			<p>
-	                				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
-	                			</p>
-	                		</div>
-	                	</div>		
-	                </div>
-	            </div>
-			</div>
+            	<div class="slide__content col-md-4">
+            		<div class="slide__content__image">
+            			<img src="img/blog/post3.jpg" alt="img">
+            			<div class="box-out">
+            				<div class="box-in">
+            					<p>Jan</p>
+            					<h5>23</h5>
+            				</div>
+            			</div>
+            		</div>
+            		<div class="slide__content__text">
+            			<a href="">
+            				<h4>
+                				Ut lacinia erat ut diam volutpat
+                			</h4>
+            			</a>
+            			<p>
+            				Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci mauris
+            			</p>
+            		</div>
+            		<div class="slide__content__info">
+            			<p>
+            				<i class="far fa-comment"></i> 12 &nbsp&nbsp&nbsp&nbsp<i class="far fa-heart"></i> 6
+            			</p>
+            		</div>
+            	</div>		            
+            </div>
 		</div>
 	</div>
 	<div class="footer container-fluid">
 		<div class="container">
 			<div class="row footer-content">
-				<div class="col-md-4 footer__about footer-content__col">
+				<div class="col-md-3 footer__about footer-content__col col-sm-12">
 					<div class="col__title">
 						<p>
-							aaaa
+							About Franco
 						</p>
 					</div>
-				</div>
-				<div class="col-md-4 footer__navigation footer-content__col">
+					<div class="col-content">
+						<p>
+							Aliquam tempor sagittis neque, vel aliquam risus consectetur vel. Aenean hendrerit, elit a lacinia suscipit, orci maurus vulputate mi, eu interdum nunc diam at impsum
+						</p>
+					</div>
 					<p>
-						aaa
+						<a href=""><i class="fab fa-twitter"></i></a>
+						&nbsp&nbsp&nbsp
+						<a href=""><i class="fab fa-linkedin-in"></i></a>
+						&nbsp&nbsp&nbsp
+						<a href=""><i class="fab fa-behance"></i></a>
+						&nbsp&nbsp&nbsp
+						<a href=""><i class="fas fa-basketball-ball"></i></a>
 					</p>
 				</div>
-				<div class="col-md-4 footer__location footer-content__col">
-					<p>
-						
-					</p>
+				<div class="col-md-1"></div>
+				<div class="col-md-4 footer__navigation footer-content__col col-sm-12">
+					<div class="col__title">
+						<p>
+							Navigaion
+						</p>
+					</div>
+					<div class="col-content row">
+						<div class="col-md-6 col-6">
+							<p>
+								<a href="">Home</a>
+							</p>
+							<p>
+								<a href="">About Us</a>
+							</p>
+							<p>
+								<a href="">Out Blog</a>
+							</p>
+							<p>
+								<a href="">Women</a>
+							</p>
+							<p>
+								<a href="">Men</a>
+							</p>
+							<p>
+								<a href="">Contact Us</a>
+							</p>
+						</div>
+						<div class="col-md-6 col-6">
+							<p>
+								<a href="">FAQs</a>
+							</p>
+							<p>
+								<a href="">Featured Brands</a>
+							</p>
+							<p>
+								<a href="">Gift Vouchers</a>
+							</p>
+							<p>
+								<a href="">Affiliates</a>
+							</p>
+							<p>
+								<a href="">Speacials Gift</a>
+							</p>
+							<p>
+								<a href="">Terms & Conditions</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+				<div class="col-md-3 footer__location footer-content__col col-sm-12">
+					<div class="col__title">
+						<p>
+							Shop Location
+						</p>
+					</div>
+					<div class="col-content">
+
+						<p>
+							<a href=""><i class="far fa-map"></i>500 Hennessy Road</a>
+						</p>
+						<p>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+							<a href="">Cause Bay, Hong Kong</a>
+						</p>
+					
+						<p>
+							<a href=""><i class="fas fa-phone"></i>+1 23456789 </a>
+						</p>
+						<p>
+							<a href=""><i class="far fa-envelope"></i>contact@yourdomain.com</a>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</body>
+	<div class="copyright container-fluid">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<prev>
+						<i class="far fa-copyright"></i>
+						Copyright 2015 & Made with <b><i class="fas fa-heart"></i></b> by 
+					</prev>
+					ArrowHitech
+				</div>
+				<div class="col-md-6">
+					<div class="pay">
+						<prev>
+							<a href=""><i class="fab fa-cc-visa"></i></a>
+							<a href=""><i class="fab fa-cc-paypal"></i></a>
+							<a href=""><i class="fab fa-cc-mastercard"></i></a>
+							<a href=""><i class="fab fa-cc-discover"></i></a>
+							<a href=""><i class="fab fa-cc-amex"></i></a>
+						</prev>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
+<script src="slick_slider/slick/slick.js"></script>
 <script type="text/javascript">
-          $(document).ready(function(){
-            $('.owl-carousel').owlCarousel({
-                loop:true,
-                margin:10,
-                nav:false,
-                responsive:{
-                    0:{
-                    items:1
-                },
-                   600:{
-                    items:3
-                   },
-                    1000:{
-                    items:1
-                   }
-                }
-            });
-          });
-   </script>
-</html
+	$('.sliders').slick({
+	  dots: true,
+	  infinite: true,
+	  speed: 300,
+	  slidesToShow: 3,
+	  slidesToScroll: 3,
+	  arrows: false,
+	  adaptiveHeight: false,
+	  dotClass: 'dots',
+	  responsive: [
+	    {
+	      breakpoint: 600,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 2
+	      }
+	    },
+	    {
+	      breakpoint: 480,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1
+	      }
+	    }
+	    // You can unslick at a given breakpoint now by adding:
+	    // settings: "unslick"
+	    // instead of a settings object
+	  ]
+	});
+</script>
+<script type="text/javascript">
+	$(function() {
+	    var pull        = $('#bars');
+	        menu        = $('ul li');
+	        menuHeight  = menu.height();
+	 		a = 1;
+	    $(pull).on('click', function(e) {
+	    	a = 0;
+	        e.preventDefault();
+	        menu.slideToggle();
+	    });
+	});
+
+	$(window).resize(function(){
+	    var w = $(window).width();
+	    if(w > 830 && menu.is(':hidden')) {
+	        menu.removeAttr('style');
+	    }
+	});
+</script>
+
+</body>   
+</html>
