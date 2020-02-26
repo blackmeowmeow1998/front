@@ -8,8 +8,8 @@
 			padding-top: 70px;
 			padding-bottom: 75px;
 			@include responsive_mobile{
-				padding-top: 30px;
-				padding-bottom: 20px;
+				padding-top: 50px;
+				padding-bottom: 23px;
 			}
 			p {
 				font-family: 'Montserrat';
@@ -44,16 +44,16 @@
 				padding-left: 15px;
 				padding-right: 15px;
 				.slide__content__image {
+					position: relative;
 					img {
 						width: 100%;
-						position: relative;
 					}
 					.box-out {
 						width: 60px;
 						height: 60px;
 						z-index: 1000;
 						position: absolute;
-						top: 22px;
+						top: 20px;
 						left: 20px;
 						border: none;
 						background-color: #A1D1DD;
@@ -85,9 +85,6 @@
 					padding: 20px 26px 0px 19px;
 					a {
 						h4 {
-							@include responsive_mobile {
-								font-size: 12px;
-							}
 							font-size: 16px;
 							font-weight: 505;
 							color: black;
@@ -100,9 +97,6 @@
 						text-decoration: none;
 					}
 					p {
-						@include responsive_mobile {
-								font-size: 10px;
-						}
 						font-family: 'Open Sans';
 						font-size: 14px;
 						color: #424242;

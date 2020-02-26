@@ -6,6 +6,36 @@
 	.container {
 		.footer-content {
 			padding-top: 50px;
+			@include responsive_425 {
+				.footer__about {
+					p {
+						i {
+							margin-right: 50px;
+						}
+					}
+				}
+			}
+			@include responsive_375 {
+				.footer__about {
+					p {
+						i {
+							margin-right: 50px;
+						}
+					}
+				}
+			}
+			@include responsive_768 {
+				.footer__about {
+					p {
+						i {
+							margin-right: 50px;
+						}
+					}
+				}
+				.helper_div {
+					display: none;
+				}
+			}
 			.footer-content__col {
 				a {
 					color: #888888;
@@ -24,13 +54,17 @@
 						border-bottom: 1px solid #393939;
 						color: #F7F7F7;
 						@include responsive_mobile {
-							padding-top: 30px;
+							padding-top: 15px;
+							padding-bottom: 15px;
 							border-top: 1px solid #393939;
 						}
 					}
 				}
 				.col-content {
 					padding-bottom: 49px;
+					@include responsive_mobile {
+						padding-bottom: 20px;
+					}
 					p {
 						font-family: Open Sans;
 						font-size: 14px;
@@ -50,6 +84,7 @@
 
 				}
 			}
+
 		}
 	}
 }
@@ -60,22 +95,46 @@
 	color: white;
 	font-family: Open Sans;
 	font-size: 14px;
-	prev {
-		color: #888888;
-		b {
-			color: #FF4628;
+	.cpy {
+		@include responsive_425 {
+			float: none;
+			text-align: center;
+		}
+		@include responsive_375 {
+			float: none;
+			text-align: center;
+		}
+		@include responsive_320 {
+			float: none;
+			text-align: center;
+		}
+
+		prev {
+			color: #888888;
+			b {
+				color: #FF4628;
+			}
 		}
 	}
 	.pay {
 			float: right;
-			@include responsive_mobile {
+			@include responsive_425 {
 				float: none;
+				text-align: center;
+				margin-top: 30px;
+			}
+			@include responsive_375 {
+				float: none;
+				text-align: center;
+				margin-top: 30px;
+			}
+			@include responsive_320 {
+				float: none;
+				text-align: center;
+				margin-top: 30px;
 			}
 			a{
 				color: #888888;
 			}
-	}
-	@include responsive_mobile {
-		text-align: center;
 	}
 }	

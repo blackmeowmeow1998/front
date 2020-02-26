@@ -6,10 +6,6 @@
 	.header__logo {
 		position: absolute;
 		left: 0px;
-		@include responsive_mobile {
-			float: none;
-			display: block;
-		}
 		padding: 20px 0px 20px 30px;
 		img {
 			@include responsive_mobile {
@@ -17,6 +13,11 @@
 			}
 			height: 100%;
 			float: left;
+		}
+		@include responsive_mobile {
+			float: none;
+			display: block;
+			padding-left: 15px;
 		}
 	}
 	.header__menu {
@@ -71,6 +72,9 @@
 	}
 	.header__tag {
 		padding: 30px 30px 19px 0px;
+		@include responsive_mobile {
+			padding-right: 15px;
+		}
 		position: absolute;
 		right: 0px;
 		i {
