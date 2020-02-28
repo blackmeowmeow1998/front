@@ -38,6 +38,11 @@
 			}
 		}
 		.sliders {
+			position: relative;
+			button {
+				color: red;
+			}
+			position: relative;
 			padding-top: 10px;
 			.slide__content {
 				max-width: 100%!important;
@@ -47,6 +52,10 @@
 					position: relative;
 					img {
 						width: 100%;
+						filter: grayscale(100%);
+					}
+					img:hover {
+						filter: grayscale(0%);
 					}
 					.box-out {
 						width: 60px;
@@ -120,6 +129,33 @@
 					}
 				}
 			}
+			.slick-dots {
+				button:before {
+					color: #8262B5!important;
+				}
+			}
+			.slick-active {
+				button:before {
+					font-size: 12px;
+				}
+			} 
 		}	
+		.arrows {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 1000;
+			text-align: center;
+			display: none;
+			@include responsive_mobile {
+				display: block;
+			}
+			#click-back {
+				float: left;
+			}
+			#click-next {
+				float: right;
+			}
+		}
 	}
 }
