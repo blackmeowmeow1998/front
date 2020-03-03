@@ -180,6 +180,9 @@
     .content .content__ads .ads-right .ads-right__bottom {
       position: relative;
       margin-top: 20px; }
+      @media only screen and (min-width: 1200px) {
+        .content .content__ads .ads-right .ads-right__bottom {
+          margin-top: 30px; } }
       .content .content__ads .ads-right .ads-right__bottom img {
         width: 100%; }
       .content .content__ads .ads-right .ads-right__bottom .box-right {
